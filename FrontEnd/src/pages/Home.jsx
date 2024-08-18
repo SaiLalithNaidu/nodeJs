@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar/NavBar";
 
 const Home = () => {
   const { user, logout } = useContext(AuthContext);
@@ -23,8 +23,6 @@ const Home = () => {
     
     <div className="homeContainer bg-primary-subtle one">
       <NavBar />
-      <h1>Home Page</h1>
-      <button onClick={handleLogout}>Logout</button>
       <ToastContainer />
     </div>
   );
