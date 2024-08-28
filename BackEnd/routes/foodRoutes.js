@@ -1,5 +1,5 @@
 import express from 'express';
-import { addFood } from '../controllers/foodControler.js'; // Ensure the file name is correct
+import { addFood,listFood,removeFood } from '../controllers/foodControler.js'; // Ensure the file name is correct
 import multer from 'multer';
 
 const foodRouter = express.Router();
@@ -16,5 +16,7 @@ const upload = multer({ storage: storage });  // Initialize multer before using 
 
 // POST METHOD
 foodRouter.post('/add', upload.single('image'), addFood);
+foodRouter.get('/list',listFood);
+foodRouter.post('/remove', removeFood);
 
 export default foodRouter;

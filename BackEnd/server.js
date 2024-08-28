@@ -22,6 +22,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);  // Use `import` for routes
 app.use('/api/food', foodRoutes);  // Use `import` for routes
+app.use('/images',express.static('uploads'));
 
 // Database Connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
