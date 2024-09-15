@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { assets } from '../../assets/assets';
 import '../Navbar/Navbar.css'
 import { AuthContext } from '../../context/AuthContext';
+import { NavLink } from 'react-router-dom'  
 
 
 const NavBar = () =>{
@@ -17,7 +18,7 @@ const NavBar = () =>{
         navigate("/login"); // Redirect to login page after logout
       };
       
-      const [menu,setMenu] = useState("menu");
+      const [menu,setMenu] = useState("home");
 
     return(<div className='bg-white'>
         <div className='d-flex justify-content-between'>

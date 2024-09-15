@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
       axios.get('http://localhost:5000/api/auth/user', {
         headers: { 'x-auth-token': token }
       }).then(response => {
-        console.log('Fetched user:', response.data); // Debug log
+        // console.log('Fetched user:', response.data); // Debug log
         setUser(response.data);
         setLoading(false);
       }).catch(error => {

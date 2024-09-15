@@ -19,8 +19,6 @@ const Home = () => {
   }
 
   return (
-    // create one function react  
-    
     <div className="homeContainer bg-primary-subtle one">
       <NavBar />
       <ToastContainer />

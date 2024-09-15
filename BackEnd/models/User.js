@@ -14,7 +14,8 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-});
+  cartData:{type:Object, default:{}}
+},{minimize:false});
 
 const User = mongoose.model.User || mongoose.model('User', UserSchema);
 
