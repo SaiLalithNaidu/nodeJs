@@ -4,8 +4,9 @@ import { AuthContext } from "../context/AuthContext.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavBar from "../components/Navbar/NavBar";
+import HomeListing from "../pages/Listing/HomeListing.jsx"
 
-const Home = () => {
+const Home = ({url}) => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -21,6 +22,7 @@ const Home = () => {
   return (
     <div className="homeContainer bg-primary-subtle one">
       <NavBar />
+      <HomeListing url={url}/>
       <ToastContainer />
     </div>
   );

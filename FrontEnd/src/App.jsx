@@ -11,14 +11,15 @@ import './App.css';
 import './components.css'
 
 const App = () => {
+  const url = "http://localhost:5000"
   return (
     <Router>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/Home" element={<ProtectedRoute component={Home} />} />
+          <Route path="/" element={<Register url={url}/>} />
+          <Route path="/login" element={<Login url={url}/>} />
+          <Route path="/register" element={<Register url={url}/>} />
+          <Route path="/home" element={<ProtectedRoute component={() => <Home url={url} />} />} />
         </Routes>
       </AuthProvider>
     </Router>

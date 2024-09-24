@@ -7,6 +7,26 @@
   box-sizing: border-box;
 }
 
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 14px; /* Set the width of the scrollbar */
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Set the background color of the scrollbar track */
+  border-radius: 10px; /* Round the edges of the scrollbar track */
+  margin: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #cccccc;
+  border: 3px solid rgba(255, 255, 255, .5);
+  background-clip: padding-box;
+  min-height: 4rem;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

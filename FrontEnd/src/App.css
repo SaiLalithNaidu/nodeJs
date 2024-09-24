@@ -35,7 +35,7 @@ button {
   padding-bottom: 3px !important;
 }
 button:hover {
-  background-color: black;
+  background-color: #eb1010;
   color: white;
   border-radius: 5px !important;
   transition: 0.3s;
