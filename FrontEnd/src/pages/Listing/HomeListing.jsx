@@ -12,7 +12,6 @@ const HomeListing = ({ url }) => {
       const response = await axios.get(`${url}/api/food/list`);
       if (response.status === 200) {
         setProductsList(response.data.data); // Set products to the state
-        console.log(response.data.data); // Log the actual response data
       } else {
         toast.error('Error fetching product list');
       }
