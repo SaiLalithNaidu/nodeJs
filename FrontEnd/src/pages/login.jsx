@@ -36,7 +36,7 @@ const Login = () => {
         className="align-items-center d-flex flex-column justify-content-center my-4"
         onSubmit={handleSubmit}
       >
-        <label className="font-b fs-5 mb-4">Sign in</label>
+        <label className="font-b fs-5 mb-4 text-3xl font-bold">Sign in</label>
         <div className="d-flex flex-column mb-4 col-6">
           <label>Email</label>
           <input

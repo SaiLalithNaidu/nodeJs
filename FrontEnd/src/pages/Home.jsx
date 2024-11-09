@@ -21,8 +21,7 @@ const Home = ({url}) => {
 
   return (
     <div className="homeContainer bg-primary-subtle one">
-      <NavBar />
-      <HomeListing url={url}/>
+      <NavBar url={url}/>
       <ToastContainer />
     </div>
   );

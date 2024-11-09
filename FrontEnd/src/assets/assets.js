@@ -60,6 +60,20 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
+
+
+import Biryani from './Catgeroyies/Biryani.jpg';
+import Burger from './Catgeroyies/Burger.jpg';
+import Cake from './Catgeroyies/Cake.jpg';
+import Chinese from './Catgeroyies/Chinese.jpg';
+import Dosa from './Catgeroyies/Dosa.jpg';
+import IceCream from './Catgeroyies/IceCream.jpg';
+import NorthIndian from './Catgeroyies/NorthIndian.jpg';
+import Pizza from './Catgeroyies/Pizza.jpg';
+import Rolls from './Catgeroyies/Rolls.jpg';
+
+
+
 export const assets = {
     logo,
     basket_icon,
@@ -348,3 +362,16 @@ export const food_list = [
         category: "Noodles"
     }
 ]
+
+export const categoryies = {
+    Biryani,
+    Burger,
+    Cake,
+    Chinese,
+    IceCream,
+    Dosa,
+    NorthIndian,
+    Pizza,
+    Rolls,
+    Burger
+}

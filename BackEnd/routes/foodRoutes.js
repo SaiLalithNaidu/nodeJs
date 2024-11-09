@@ -17,7 +17,7 @@ const upload = multer({ storage: storage });  // Initialize multer before using 
 
 // POST METHOD
 foodRouter.post('/add', upload.single('image'), addFood);
-foodRouter.get('/list', auth, listFood);
+foodRouter.get('/list', listFood);
 foodRouter.post('/remove', removeFood);
 
 export default foodRouter;

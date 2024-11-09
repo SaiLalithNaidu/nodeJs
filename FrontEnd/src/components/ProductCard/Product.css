@@ -1,14 +1,11 @@
-.productCarDiv
+.productCarDiv 
 {
-    width: 15%; /* Adjust width as needed to fit multiple cards in a row */
-    margin-bottom: 20px; /* Add margin to separate rows */
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visibility */
-    border-radius: 10px;
+  margin: 10px;
+  box-sizing: border-box;
 }
-.imagTag
+.imagTag 
 {
-    height: 10rem;
-    border-radius: 1rem;
-    width: 11rem;
+  height: auto;
+  width: 170px;
+  border-radius: 1rem;
 }

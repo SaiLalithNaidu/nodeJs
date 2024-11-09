@@ -72,14 +72,14 @@ const Add = ({url}) => {
                     <div className="add-catgeory flex-col">
                         <p>Product category</p>
                         <select onChange={onChangeHandler} name="category">
-                            <option value="salad">Salad</option>
-                            <option value="Rolls">Rolls</option>
-                            <option value="Deserts">Deserts</option>
-                            <option value="Sandwich">Sandwich</option>
+                            <option value="Bhiryani">Bhiryani</option>
+                            <option value="Burger">Burger</option>
                             <option value="Cake">Cake</option>
-                            <option value="Pure veg">Pure veg</option>
-                            <option value="Pasta">Pasta</option>
-                            <option value="Noodles">Noodles</option>
+                            <option value="Chines">Chines</option>
+                            <option value="Dosa">Dosa</option>
+                            <option value="Ice cream">Ice cream</option>
+                            <option value="North Indian">North Indian</option>
+                            <option value="Pizza">Pizza</option>
                         </select>
                     </div>
                     <div className="add-price flex-col">
