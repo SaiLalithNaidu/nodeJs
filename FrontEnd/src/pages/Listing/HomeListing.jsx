@@ -25,19 +25,52 @@ const HomeListing = ({ url }) => {
     }
   };
 
-  const menuListData = 
-    {
-      'image_1': categoryies.Biryani,
-      'image_2': categoryies.Burger,
-      'image_3': categoryies.Cake,
-      'image_4': categoryies.Chinese,
-      'image_5': categoryies.Dosa,
-      'image_6': categoryies.IceCream,
-      'image_7': categoryies.NorthIndian,
-      'image_8': categoryies.Pizza,
-      'image_9': categoryies.Rolls,
-    };
+  function selectedMenu(index,name)
+  {
+    const filteredProducts = productsList.filter(product => product.category === name);
+    setProductsList(filteredProducts);
+    // toast.info(`Showing ${selectedCategory} products`);
+  };
 
+  const menuListData = [
+    {
+      'image': categoryies.Biryani,
+      'name': 'Biryani'
+    },
+    {
+      'image': categoryies.Burger,
+      'name': 'Burger'
+    },
+    {
+      'image': categoryies.Cake,
+      'name': 'Cake'
+    },
+    {
+      'image': categoryies.Chinese,
+      'name': 'Chinese'
+    },
+    {
+      'image': categoryies.Dosa,
+      'name': 'Dosa'
+    },
+    {
+      'image': categoryies.IceCream,
+      'name': 'IceCream'
+    },
+    {
+      'image': categoryies.NorthIndian,
+      'name': 'North Indian'
+    },
+    {
+      'image': categoryies.Pizza,
+      'name': 'Pizza'
+    },
+    {
+      'image': categoryies.Rolls,
+      'name': 'Rolls'
+    }
+  ];
+  
   useEffect(() => {
     fetchProductsList();
   }, [url]);
@@ -45,11 +78,11 @@ const HomeListing = ({ url }) => {
   return (
     <div className='homeTabDiv bg-white my-2 mx-2 px-2 rounded-10'>
       <div className='d-flex justify-content-between mt-2'>
-      {Object.values(menuListData).map((imageSrc, index) => (
-          <div className='mx-2 cursor-pointer' key={index} >
-            <img src={imageSrc} alt="" />
+        {menuListData.map((item, index) => (
+          <div className='mx-2 cursor-pointer' key={index}>
+            <img src={item.image} alt={item.name} onClick={() => selectedMenu(index,item.name)} />
           </div>
-        ))} 
+        ))}
       </div>
       {productsList.length > 0 ? (
         <div className='d-flex flex-wrap align-items-center justify-content-between'>
@@ -62,6 +95,7 @@ const HomeListing = ({ url }) => {
       )}
     </div>
   );
+  
 };
 
 export default HomeListing;
